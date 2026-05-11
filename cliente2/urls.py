@@ -1,8 +1,8 @@
 """
-URL configuration for cliente2 project.
+URL configuration for cliente project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/6.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,10 +19,10 @@ from django.urls import path
 
 from cliente import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('atualizar-cliente/<int:id>/', views.atualizar_cliente, name = 'atualizar_cliente'),
-    path('excluir-cliente/<int:id>/', views.excluir_cliente, name = 'excluir_cliente'),
-    path('',views.novo_cliente,name='novo_cliente'),
+    path('atualizar-cliente/<int:id>/', views.atualizar_cliente, name='atualizar_cliente'),
+    path('excluir-cliente/<int:id>/', views.excluir_cliente, name='excluir_cliente'),
+    path('login/', views.login_usuario, name='login_usuario'),
+    path('', views.novo_cliente, name='novo_cliente'),
 ]
