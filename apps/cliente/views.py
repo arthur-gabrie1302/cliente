@@ -100,4 +100,8 @@ def novo_usuario(request):
         form = UsuarioForm()
     context = {'form' : form}
     return render (request, template_name, context)
-        
+
+@login_required
+def Sair(request):
+    logout(request)
+    return redirect('loguin_usuario')
