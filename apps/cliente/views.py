@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 # importação do login
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 
@@ -104,4 +104,4 @@ def novo_usuario(request):
 @login_required
 def Sair(request):
     logout(request)
-    return redirect('loguin_usuario')
+    return redirect('login_usuario')
